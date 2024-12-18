@@ -93,3 +93,46 @@ h1 {
     padding: 0.75rem;
   }
 }
+
+.single-article-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.single-article-page h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.single-article-page .metadata {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.article-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+}
+
+.single-article-page footer {
+  margin-top: 2rem;
+}
+
+.single-article-page a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.single-article-page a:hover {
+  text-decoration: underline;
+}

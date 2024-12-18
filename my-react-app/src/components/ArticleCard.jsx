@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const ArticleCard = ({ article }) => {
-  const { title, author, topic, created_at, votes, comment_count } = article;
+  const { article_id, title, author, topic, created_at, votes, comment_count } = article;
 
   const formattedDate = new Date(created_at).toLocaleDateString('en-GB', {
     year: 'numeric', month: 'long', day: 'numeric'
@@ -9,7 +11,8 @@ const ArticleCard = ({ article }) => {
 
   return (
     <article className="article-card">
-      <h2>{title}</h2>
+
+    <Link to={`/articles/${article_id}`}>{title}</Link>
       <p className="metadata">
         <span className="author">By {author}</span> |{' '}
         <span className="topic">{topic}</span> |{' '}
