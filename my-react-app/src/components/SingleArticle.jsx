@@ -39,7 +39,7 @@ const SingleArticle = () => {
     fetch(`https://news-project-2.onrender.com/api/articles/${article_id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ inc_votes: increment }),
+      body: JSON.stringify({ votes: increment }),
     })
     .then(res => {
       if (!res.ok) {
@@ -49,6 +49,7 @@ const SingleArticle = () => {
     })
     .then(data => {
         setArticle(data.article);
+        setOptimisticVotes(0);
     })
     .catch(err => {
       // Revert optimistic update on error
